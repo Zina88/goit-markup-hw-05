@@ -284,6 +284,7 @@ img {
   align-items: center;
   position: absolute;
   bottom: 0;
+  left: 0;
   width: 100%;
   height: 70px;
 
@@ -606,11 +607,39 @@ img {
   margin-bottom: 0;
 }
 
-.photo > .link {
-  margin-bottom: 0;
+.photo-thumb {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
-/*галлерея фото*/
+.photo-link:hover .photo-thumb-text,
+.photo-link:focus .photo-thumb-text {
+  transform: translate(0);
+}
+
+.photo-thumb-text {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+
+  transform: translateY(100%);
+  transition: transform 500ms ease;
+}
+
+.photo-thumb-text > p {
+  padding: 63px 24px;
+
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+}
+
 .portfolio-items {
   margin-bottom: 4px;
   color: var(--title-text-color);
