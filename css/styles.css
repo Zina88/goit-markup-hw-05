@@ -114,6 +114,24 @@ img {
 .site-nav .link.current {
   color: var(--accent-color);
 }
+
+.site-nav-item {
+  position: relative;
+}
+
+.current::after {
+  margin-top: 28px;
+  display: inline-block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  content: '';
+  background-color: var(--accent-color);
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+}
+
 /*контакты*/
 .contacts {
   display: flex;
@@ -227,7 +245,7 @@ img {
   min-width: 528px;
   min-height: 581px;
 
-  background-color: #ffffff;
+  background-color: var(--white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -244,7 +262,7 @@ img {
   width: 30px;
   height: 30px;
 
-  background-color: #ffffff;
+  background-color: var(--white-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
 }
@@ -342,7 +360,7 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 
-  color: #ffffff;
+  color: var(--white-color);
   background-color: rgba(47, 48, 58, 0.8);
 }
 
@@ -358,7 +376,7 @@ img {
 
 .icon-items {
   margin-right: 30px;
-  background-color: #ffffff;
+  background-color: var(--white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -546,7 +564,7 @@ img {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #ffffff;
+  color: var(--white-color);
   margin-bottom: 20px;
 }
 
@@ -684,7 +702,7 @@ img {
   font-size: 18px;
   line-height: 1.56;
   letter-spacing: 0.03em;
-  color: #ffffff;
+  color: var(--white-color);
 }
 
 .portfolio-items {
