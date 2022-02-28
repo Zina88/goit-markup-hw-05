@@ -7,6 +7,7 @@
   --section-color: #2f303a;
   --logo-color: #afb1b8;
   --button-bgc: #f5f4fa;
+  --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -104,6 +105,8 @@ img {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+
+  transition: color 250ms var(--transition-timing-function);
 }
 
 .site-nav-link:hover,
@@ -152,6 +155,9 @@ img {
   line-height: 1.4;
   letter-spacing: 0.02em;
   margin-bottom: 0;
+
+  transition: color 250ms var(--transition-timing-function),
+    fill 250ms var(--transition-timing-function);
 }
 
 .contacts-logo-svg {
@@ -214,6 +220,8 @@ img {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
+
+  transition: background-color 250ms var(--transition-timing-function);
 }
 
 .hero-button:hover,
@@ -232,6 +240,7 @@ img {
 }
 
 .backdrop.is-hidden {
+  visibility: visible;
   opacity: 0;
   pointer-events: none;
 }
@@ -434,6 +443,9 @@ img {
   height: 44px;
   border-radius: 50%;
   color: var(--logo-color);
+
+  transition: background-color 250ms var(--transition-timing-function),
+    color 250ms var(--transition-timing-function);
 }
 
 .icon-logo {
@@ -486,6 +498,9 @@ img {
   border: 1px solid var(--logo-color);
   border-radius: 4px;
   color: var(--logo-color);
+
+  transition: color 250ms var(--transition-timing-function),
+    border 250ms var(--transition-timing-function);
 }
 
 .clients-logo-svg {
@@ -547,6 +562,8 @@ img {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+
+  transition: color 250ms var(--transition-timing-function);
 }
 
 .footer-contacts:hover,
@@ -591,6 +608,8 @@ img {
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
   color: var(--white-color);
+
+  transition: background-color 250ms var(--transition-timing-function);
 }
 
 .subscribe-logo {
@@ -633,6 +652,10 @@ img {
   letter-spacing: 0.03em;
 
   text-align: center;
+
+  transition: background-color 250ms var(--transition-timing-function),
+    color 250ms var(--transition-timing-function),
+    box-shadow 250ms var(--transition-timing-function);
 }
 
 .btn:hover,
@@ -656,6 +679,8 @@ img {
 
 .photo-link {
   display: block;
+
+  transition: box-shadow 250ms var(--transition-timing-function);
 }
 
 .photo-link:hover,
@@ -693,7 +718,7 @@ img {
   background-color: rgba(33, 150, 243, 0.9);
 
   transform: translateY(100%);
-  transition: transform 250ms ease;
+  transition: transform 250ms var(--transition-timing-function);
 }
 
 .photo-thumb-text > p {
