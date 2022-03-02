@@ -123,16 +123,21 @@ img {
 }
 
 .current::after {
-  margin-top: 28px;
   display: inline-block;
   position: absolute;
-  top: 100%;
-  left: 0;
   content: '';
+  bottom: -32px;
+  left: 0;
+
   background-color: var(--accent-color);
   width: 100%;
   height: 4px;
   border-radius: 2px;
+}
+
+.current:hover::after {
+  transform: scaleX(0.7);
+  transition: transform 250ms var(--transition-timing-function);
 }
 
 /*контакты*/
