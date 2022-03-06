@@ -126,7 +126,7 @@ img {
   display: inline-block;
   position: absolute;
   content: '';
-  bottom: -32px;
+  bottom: -33px;
   left: 0;
 
   background-color: var(--accent-color);
@@ -247,7 +247,8 @@ img {
   background-color: rgba(0, 0, 0, 0.2);
 
   opacity: 1;
-  transition: opacity 250ms var(--transition-timing-function);
+  transition: opacity 250ms var(--transition-timing-function),
+    visibility 250ms var(--transition-timing-function);
 }
 
 .backdrop.is-hidden {
